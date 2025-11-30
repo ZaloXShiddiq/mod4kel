@@ -167,4 +167,19 @@ class HomeController extends GetxController {
   void toAbout() {
     Get.toNamed(AppRoutes.about);
   }
+
+  /// Navigate to the Network Location page defined in Modul 5.
+  void toNetworkLocation() {
+    Get.toNamed(AppRoutes.networkLocation);
+  }
+
+  /// Navigate to the GPS Location page defined in Modul 5.
+  void toGpsLocation() {
+    Get.toNamed(AppRoutes.gpsLocation);
+  }
+
+  /// Navigate to the Live Location page defined in Modul 5.
+  void toLiveLocation() {
+    Get.toNamed(AppRoutes.liveLocation);
+  }
 }

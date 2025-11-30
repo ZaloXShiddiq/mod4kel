@@ -166,6 +166,61 @@ class HomeView extends GetView<HomeController> {
               ),
             ),
           ),
+
+          // Location-aware navigation card for Modul 5
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: const EdgeInsets.all(16),
+              child: Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(16),
+                ),
+                elevation: 2,
+                child: Padding(
+                  padding: const EdgeInsets.all(20),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Fitur Location-Aware',
+                        style: GoogleFonts.inter(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                      const SizedBox(height: 10),
+                      Text(
+                        'Eksplorasi akurasi lokasi menggunakan Network, GPS, dan Live update.',
+                        style: GoogleFonts.inter(fontSize: 14),
+                      ),
+                      const SizedBox(height: 16),
+                      Wrap(
+                        spacing: 12,
+                        runSpacing: 12,
+                        children: [
+                          ElevatedButton.icon(
+                            onPressed: controller.toNetworkLocation,
+                            icon: const Icon(Icons.network_wifi),
+                            label: const Text('Network'),
+                          ),
+                          ElevatedButton.icon(
+                            onPressed: controller.toGpsLocation,
+                            icon: const Icon(Icons.gps_fixed),
+                            label: const Text('GPS'),
+                          ),
+                          ElevatedButton.icon(
+                            onPressed: controller.toLiveLocation,
+                            icon: const Icon(Icons.location_searching),
+                            label: const Text('Live'),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );
