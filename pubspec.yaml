@@ -24,6 +24,16 @@ dependencies:
   cupertino_icons: ^1.0.8
   http: ^1.2.0
 
+  # Additional dependencies for location‑aware features (Modul 5)
+  # geolocator provides access to the device’s location sensors
+  geolocator: ^10.0.0
+  # permission_handler simplifies runtime permission checks on mobile
+  permission_handler: ^11.0.1
+  # flutter_map and latlong2 enable displaying maps and markers based on
+  # OpenStreetMap data
+  flutter_map: ^4.0.0
+  latlong2: ^0.8.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
